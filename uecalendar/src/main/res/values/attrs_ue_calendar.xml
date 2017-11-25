@@ -1,0 +1,23 @@
+<resources>
+    <declare-styleable name="UeCalendar">
+        <attr name="todayText" format="string" />
+        <attr name="todayColor" format="color" />
+        <attr name="showTitle" format="boolean" />
+        <attr name="titleHeight" format="dimension" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleBackground" format="color" />
+        <attr name="showWeek" format="boolean" />
+        <attr name="weekHeight" format="dimension" />
+        <attr name="weekSize" format="dimension" />
+        <attr name="weekColor" format="color" />
+        <attr name="weekBackground" format="color" />
+        <attr name="arrowColor" format="color" />
+        <attr name="otherMonthColor" format="color" />
+        <attr name="reachDayColor" format="color" />
+        <attr name="unreachDayColor" format="color" />
+        <attr name="selectedDayColor" format="color" />
+        <attr name="daySize" format="dimension" />
+        <attr name="selectedDayBackground" format="color" />
+    </declare-styleable>
+</resources>

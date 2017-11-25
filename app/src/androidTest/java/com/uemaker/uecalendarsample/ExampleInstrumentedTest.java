@@ -1,4 +1,4 @@
-package com.uemaker.uecalendar;
+package com.uemaker.uecalendarsample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
