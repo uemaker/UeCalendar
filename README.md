@@ -3,6 +3,9 @@ a simple calendar for android
 
 <img src="/images/screen.jpg" alt="Demo Screen" width="300px" />
 
+简单实用，可左右滑动，基于ViewPager + GridView 布局
+高度自适应
+
 Usage
 -----
 
