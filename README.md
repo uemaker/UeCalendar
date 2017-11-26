@@ -32,9 +32,14 @@ Example:
 
 ```xml
 <com.uemaker.uecalendar.UeCalendar
-    android:id="@+id/calendar"
+    android:id="@+id/ue_calendar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    app:titleColor="#000"
+    app:titleSize="16sp"
+    app:weekSize="16sp"
+    app:weekBackground="#fff"
     />
 ```
 

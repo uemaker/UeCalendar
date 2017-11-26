@@ -10,6 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#f5f5f5"
+        app:titleColor="#000"
+        app:titleSize="16sp"
+        app:weekSize="16sp"
+        app:weekBackground="#fff"
         />
 
 
