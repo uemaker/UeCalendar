@@ -8,7 +8,9 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -117,6 +119,10 @@ public class UeCalendar extends LinearLayout implements View.OnClickListener,Cal
         if(!showWeek){
             calendarHeader.setVisibility(GONE);
         }
+        if(titleHeight>0){
+            rlTitle.setLayoutParams(new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, (int) titleHeight));
+        }
+
         tvCurrentMonth.setTextColor(titleColor);
         tvCurrentMonth.setTextSize(titleSize);
         rlTitle.setBackgroundColor(titleBackground);
@@ -125,8 +131,6 @@ public class UeCalendar extends LinearLayout implements View.OnClickListener,Cal
         btnPreMonth.setTextColor(arrowColor);
         btnNextMonth.setTextColor(arrowColor);
         calendarHeader.setBackgroundColor(weekBackground);
-
-//        calendarItemViewAttrs = new A
     }
 
     private void initStyle(AttributeSet attrs)
@@ -135,13 +139,13 @@ public class UeCalendar extends LinearLayout implements View.OnClickListener,Cal
         todayText = ta.getString(R.styleable.UeCalendar_todayText);
         todayColor = ta.getColor(R.styleable.UeCalendar_todayColor, getResources().getColor(R.color.cl_text_gold));
         showTitle = ta.getBoolean(R.styleable.UeCalendar_showTitle, true);
-        titleHeight = ta.getDimension(R.styleable.UeCalendar_titleHeight, 40);
+        titleHeight = ta.getDimension(R.styleable.UeCalendar_titleHeight, 0);
         titleSize = ta.getDimension(R.styleable.UeCalendar_titleSize, 16);
         titleColor = ta.getColor(R.styleable.UeCalendar_titleColor, getResources().getColor(R.color.cl_text_default));
         titleBackground = ta.getColor(R.styleable.UeCalendar_titleBackground, Color.TRANSPARENT);
 
         showWeek = ta.getBoolean(R.styleable.UeCalendar_showWeek, true);
-        weekHeight = ta.getDimension(R.styleable.UeCalendar_weekHeight, 40);
+        weekHeight = ta.getDimension(R.styleable.UeCalendar_weekHeight, CommonUtil.dip2px(context,40));
         weekSize = ta.getDimension(R.styleable.UeCalendar_weekSize, 16);
         weekColor = ta.getColor(R.styleable.UeCalendar_weekColor, getResources().getColor(R.color.cl_text_default));
         weekBackground = ta.getColor(R.styleable.UeCalendar_weekBackground, Color.WHITE);
@@ -172,7 +176,7 @@ public class UeCalendar extends LinearLayout implements View.OnClickListener,Cal
         TableRow tablerow = new TableRow(context);
         for(int i=0; i<7; i++){
             TextView textView = new TextView(context);
-            textView.setLayoutParams(new TableRow.LayoutParams(LayoutParams.MATCH_PARENT, CommonUtil.dip2px(context, 40), 1.0f));
+            textView.setLayoutParams(new TableRow.LayoutParams(LayoutParams.MATCH_PARENT, (int) weekHeight, 1.0f));
             textView.setGravity(Gravity.CENTER);
             textView.setTextSize(weekSize);
             textView.setTextColor(weekColor);

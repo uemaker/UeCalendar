@@ -1,6 +1,8 @@
 package com.uemaker.uecalendar.view;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,6 +93,7 @@ public class CalendarItemView extends RelativeLayout {
 		gridView = new CalendarGridView(context);
 		gridView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
 		gridView.setNumColumns(TOTAL_COL);
+		gridView.setSelector(new ColorDrawable(Color.TRANSPARENT));
 		addView(gridView);
 
 		mShowDate = new CustomDate();
