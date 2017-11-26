@@ -1,6 +1,8 @@
 # UeCalendar
 a simple calendar for android
 
+<img src="/images/screen.jpg" alt="Demo Screen" width="300px" />
+
 Usage
 -----
 
