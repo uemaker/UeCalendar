@@ -6,9 +6,8 @@
     >
     <ImageView
         android:id="@+id/iv_circle"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
         android:layout_centerInParent="true"
         android:src="@drawable/ue_shape_circle"
         android:visibility="gone"
