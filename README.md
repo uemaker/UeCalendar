@@ -24,7 +24,7 @@ Step 2. Add the dependency
 
 ```
 	dependencies {
-		compile 'com.github.User:Repo:Tag'
+		compile 'com.github.uemaker:UeCalendar:1.0.2'
 	}
 ```
 
